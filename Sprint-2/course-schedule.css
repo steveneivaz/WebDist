@@ -1,0 +1,8 @@
+@charset "utf-8";
+/* This is the CSS document that goes along with course-schedule.html*/
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
