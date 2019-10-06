@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS document for the Dice Game html */
+h1 {
+  font-weight: bold;
+  color: white;
+  font-size: 32px;
+}
+
+body{
+	background-color: darkgray;
+}

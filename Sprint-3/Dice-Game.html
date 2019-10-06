@@ -1,0 +1,18 @@
+<!doctype html>
+<!This is the html file for the Dice-Game>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dice Game</title>
+<link rel="stylesheet" href="Dice-Game.css"> <!CSS stylesheet for the Dice Game>
+<script src="Dice-Game.js"></script> <!JavasScript file for the Dice Game>
+</head>
+<body onload="RollDice()">
+	
+	<h1>This website allows you to roll two dice in order to see who will go first in the game of Magic the Gathering.  Please have Player two click Roll Dice, as Player one's roll will be automatically rolled when the page is opened.</h1>
+	 
+     Six Sided Dice: <input id="dice1" type="text" style="text-align: right;" value="" size="5" disabled><br><br> <!The output for the Roll Dice functon>
+	 Six Sided Dice: <input id="dice2" type="text" style="text-align: right;" value="" size="5" disabled><br><br>
+	 <button type="button" onclick="RollDice()">Roll Dice</button><br><br>
+</body>
+</html>
