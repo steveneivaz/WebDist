@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!
+	Author: Steven Eivaz
+	Class: Web & Distributed Programming
+	Project: Map Mania V2
+	Description: Second version of Map Mania
+>
+<html>
+  <head>
+    <title>Map Mania</title>
+    <meta name="viewport" content="initial-scale=1.0">
+	  <script src="Map Mania.js"></script>
+	  <link rel="stylesheet" href="../Map-Mania/Map Mania.css">
+    <meta charset="utf-8">
+    
+  </head>
+  <body onload="initMap()">
+	  <a href="Rules.html">Rules</a>
+        <h1>Steven's Top Ten Favorite Places to Visit Game</h1>        
+        Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
+        Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
+	  	<script>
+			document.getElementById("score-id").addEventListener("click", function(){
+  			console.log("You Win!!!!");
+});
+</script>
+
+
+ 
+    <div id="map"></div>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJSrnI-mGIfEixBo2b9bni6Bkk9kCNVSo&callback=initMap"
+    async defer></script>
+  </body>
+</html>
