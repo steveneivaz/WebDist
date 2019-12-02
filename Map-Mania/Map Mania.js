@@ -1,6 +1,8 @@
 // JavaScript Document
 	
       var map;
+
+	
       function initMap() {
 		 var Latlng = {lat: 42.147505, lng: -86.307634};
 		  var Latlngnew = {lat: 41.6986, lng: 88.0684};

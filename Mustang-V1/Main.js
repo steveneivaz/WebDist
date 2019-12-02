@@ -1,12 +1,4 @@
-var contactURLArray = [];
-var contactArray = [];
-var loadingContact = 0;
-
-function initApplication() {
-    console.log('Mustang V1 Initializing'); 
-}
-
-var animalContainer = document.getElementById("animal-info");
+var Container = document.getElementById("info");
 var button = document.getElementById("button");
 
 button.addEventListener("click", function(){
@@ -26,10 +18,14 @@ function renderHTML(data){
 	var htmlString = "";
 	
 	for (i=0; i < data.length; i++){
-		htmlString += "<p>" + data[i].Name + "</p>";
+		htmlString += "<p>" + data[i].Name + "  " + data[i].Email +  "  " + data[i].ContactURL + ".</p>";
 	}
-	animalContainer.insertAdjacentHTML('beforeend', htmlString);
+	Container.insertAdjacentHTML('beforeend', htmlString);
 }
+
+var contactURLArray = [];
+var contactArray = [];
+var loadingContact = 0;
 
 function loadIndex() {
     var Request = new XMLHttpRequest();
@@ -87,4 +83,3 @@ function loadNextContact(URL) {
 function logContacts() {
     console.log(contactArray);
 }
-
