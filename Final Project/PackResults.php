@@ -11,15 +11,14 @@
 
 <body>
 	<nav class ="navbar navbar-expand-lg navbar-dark bg-dark">
-  			<a class="navbar-brand" href="#">Pack Opener</a>
+  			<a class="navbar-brand" href="#">Summon Results</a>
   			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collasped-content">
   		    <span class="navbar-toggler-icon"></span>
   		  </button>
   			<div class ="collapse navbar-collapse" id="collasped-content">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="../HTML/MainPage.html">Home</a>
-            <a class="nav-item nav-link" href="../HTML/Mythics.html">Mythics</a>
-            <a class="nav-item nav-link active" href="../HTML/PackOpener.html">Pack Opener</a>
+            <a class="nav-item nav-link" href="MainPage.html">Home</a>
+            <a class="nav-item nav-link active" href="SummonSimulator.html">Summon Simulator</a>
           
         </div>
       </div>
@@ -29,7 +28,7 @@
          <table class="table table-hover">
             <thead class="thead-light" >
                 <tr>
-                    <th>Set Number</th>
+                    <th>Type</th>
                     <th>Name</th>
                     <th>Rarity</th>
                     
