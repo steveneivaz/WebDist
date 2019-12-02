@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Pack Opener</title>
+<link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+		<nav class ="navbar navbar-expand-lg navbar-dark bg-dark">
+  			<a class="navbar-brand" href="#">Summon Simulator</a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collasped-content">
+  		    <span class="navbar-toggler-icon"></span>
+  		  </button>
+  			<div class ="collapse navbar-collapse" id="collapsed-content">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="MainPage.html">Home</a>
+          <a class="nav-item nav-link" href="Mythics.html">Mythics</a>
+          <a class="nav-item nav-link active" href="#">Summon Simlator</a>
+
+        
+          
+        </div>
+      </div>
+    </nav>
+  <main role="main" class="container-fluid">
+    <h1> SummonSimulator </h1>
+    <form action="PackResults.php" method="post">
+
+      <div id="search-term" class="form-div">
+        <div class="form-group">
+          <label for="select">Select Set</label>
+          <select class="form-control" id="select" name="select">
+            <option>DokkanFest Future Gohan</option>
+            
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="enter">Enter how many summons you would like to do</label>
+          <input type="text" class="form-control" id="enter" name="enter" placeholder="1" />
+        </div>
+		  <div id="error" class="text-danger"></div>
+      </div>
+		
+
+      <div id="search" class="form-div">
+        <button type="submit" class="btn btn-primary"> Open</button>
+      </div>
+		
+    </form>
+  </main>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../Javascript/Validation.js"></script>
+</body>
+
+</html>
