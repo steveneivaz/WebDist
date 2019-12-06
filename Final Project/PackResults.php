@@ -45,22 +45,29 @@
 }
 </script>
 									   
+
+			 
 <?php
- // PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:dokkan.database.windows.net,1433; Database = dokkan", "steveneivaz", "{your_password_here}");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
-
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "steveneivaz", "pwd" => "S13421963e", "Database" => "dokkan", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:dokkan.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-
+    $serverName = "dokkan.database.windows.net"; 
+    $connectionOptions = array(
+        "Database" => "dokkan", // update me
+        "Uid" => "steveneivaz", // update me
+        "PWD" => "S13421963e" // update me
+    );
+   
+    $conn = sqlsrv_connect($serverName, $connectionOptions);
+    $tsql= "SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
+         FROM [SalesLT].[ProductCategory] pc
+         JOIN [SalesLT].[Product] p
+         ON pc.productcategoryid = p.productcategoryid";
+    $getResults= sqlsrv_query($conn, $tsql);
+    echo ("Reading data from table" . PHP_EOL);
+    if ($getResults == FALSE)
+        echo (sqlsrv_errors());
+    while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
+     echo ($row['CategoryName'] . " " . $row['ProductName'] . PHP_EOL);
+    }
+    sqlsrv_free_stmt($getResults);
 ?>
 <br/>
                                        
