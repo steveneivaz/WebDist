@@ -61,6 +61,20 @@ $connectionInfo = array("UID" => "steveneivaz", "pwd" => "{S13421963e}", "Databa
 $serverName = "tcp:dokkan.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
+for ($k = 0 ; $k < $pack; $k++){ 
+        $query = "SELECT * FROM ncards order by RAND() LIMIT 10" ;
+         if($results = $db->query($query)) {
+            $num_fields = $results->field_count;
+            while($row = $results->fetch_row()) {
+                echo "<tr>";
+                for($i=0; $i<$num_fields; $i++) {
+                    echo "<td>".stripslashes($row[$i])."</td>";
+                }
+                echo "<tr/>";
+            }
+            $results->free();
+        }
+
 ?>
 <br/>
                                        
