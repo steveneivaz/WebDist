@@ -60,7 +60,13 @@ catch (PDOException $e) {
 $connectionInfo = array("UID" => "steveneivaz", "pwd" => "{S13421963e}", "Database" => "dokkan", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:dokkan.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
+require_once('db.php');  
+$sql="SELECT TOP (10) * FROM [dbo].[Ncards]"
 
+$result = mysql_query($sql);
+while($row = mysql_fetch_array($result)) {
+    echo $row['fieldname']; 
+}
 ?>
 <br/>
                                        
