@@ -64,9 +64,8 @@ require_once('db.php');
 $sql="SELECT TOP (10) * FROM [dbo].[Ncards]";
 
 $result = mysql_query($sql);
-while($row = mysql_fetch_array($result)) {
-    echo $row['Type']; 
-}
+echo mysql_result($result); 
+
 ?>
 <br/>
                                        
