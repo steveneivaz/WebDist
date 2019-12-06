@@ -61,9 +61,12 @@ $connectionInfo = array("UID" => "steveneivaz", "pwd" => "{S13421963e}", "Databa
 $serverName = "tcp:dokkan.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 require_once('db.php');  
-$sql="SELECT TOP (10) * FROM [dbo].[Ncards]"
+$sql="SELECT TOP (10) * FROM [dbo].[Ncards]";
 
-
+$result = mysql_query($sql);
+while($row = mysql_fetch_array($result)) {
+    echo $row['Type']; 
+}
 ?>
 <br/>
                                        
