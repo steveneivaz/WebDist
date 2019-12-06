@@ -60,6 +60,11 @@ catch (PDOException $e) {
 $connectionInfo = array("UID" => "steveneivaz", "pwd" => "{S13421963e}", "Database" => "dokkan", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:dokkan.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
+require_once('db.php');  
+$sql="SELECT * FROM Ncards";
+
+$result = mysql_query($sql);
+echo mysql_result($result); 
 
 for ($k = 0 ; $k < $pack; $k++){ 
         $query = "SELECT * FROM ncards order by RAND() LIMIT 10" ;
