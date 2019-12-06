@@ -66,8 +66,8 @@ $sql="SELECT * FROM Ncards";
 $result = mysql_query($sql);
 echo mysql_result($result); 
 
-for ($k = 0 ; $k < $pack; $k++){ 
-        $query = "SELECT * FROM ncards order by RAND() LIMIT 10" ;
+for ($k = 0 ; $k < 8; $k++){ 
+        $query = "SELECT * FROM Ncards" ;
          if($results = $db->query($query)) {
             $num_fields = $results->field_count;
             while($row = $results->fetch_row()) {
@@ -79,9 +79,10 @@ for ($k = 0 ; $k < $pack; $k++){
             }
             $results->free();
         }
+}
 
 ?>
-<br/>
+
                                        
                                        
 
